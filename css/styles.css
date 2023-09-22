@@ -368,7 +368,7 @@ color: #020202;
   padding: 100px 0 75px;
   background-color: #98DC95;
   border-top: 3px solid #fff;
-  background: url('../images/img2.jpg');      background-size: cover;
+  background-size: cover;
 }
 
 a.navbar-left {
@@ -424,7 +424,6 @@ padding-top: 10px;
 #portfolio {
   padding: 100px 0;
   background: #FFFFFF;
-  background: url('../images/img4.jpg');
   background-size: cover;
 }
 #portfolio .portfolio-filter {
@@ -577,7 +576,6 @@ margin-bottom: 15px;
   background-size: cover;
   padding: 100px 0;
   color: #3B8838;
-  background: url('../images/img2.jpg');
   background-size: cover;
 }
 #testimonial h2{
@@ -861,7 +859,6 @@ color: #3B8838;
  background: #98DC95;
  padding: 50px;
  margin-bottom: 50px;
- background: url('../images/img2.jpg');
 }
 .contact-info address {
 margin-bottom: 20px;
