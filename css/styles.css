@@ -375,6 +375,10 @@ a.navbar-left {
   display: inline-block; 
   width: 10%;
 }
+a.navbar-left img {
+  width: 100%; 
+  height: auto; 
+
 
 .media.service-box {
   margin: 25px 0 36px;
