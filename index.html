@@ -19,7 +19,7 @@
 <p class="authors">
 <span class="author"><a target="_blank" href="https://drm-rl.github.io/">Anonymous</a></span> 
 </p>
-<p class="venues">Preprint</p>
+<!--<p class="venues">Preprint</p>-->
 
 <div class="image"><img src="asset/title.gif" /></div>
 <!--<p class="buttons">
@@ -48,7 +48,7 @@
 <p style="text-align: center">
   <img style="width: 78%" src="/asset/drm/all_performance.png" />
   </p>
-<p>We evaluate DrM on three image-based continuous control benchmarks for both locomotion and robotic manipulation: DeepMind Control Suite, Meta-World, and Adroit. 
+<p>We evaluate DrM on three benchmarks for both locomotion and robotic manipulation: DeepMind Control Suite, Meta-World, and Adroit. 
     These environments feature rich visual elements like textures and shading, necessitate fine-grained control due to complex geometry, and introduce additional challenges 
     such as sparse rewards and high-dimensional action spaces that previous visual RL algorithms like DrQv2 have been unable to solve.</p>
 <video controls="" muted="" style="width: 100%; border-radius: .25em">
@@ -69,7 +69,7 @@
 <p>This complexity makes the three domains extremely difficult for algorithms to learn and control effectively.
   We note that DrM is the first documented model-free visual RL algorithm capable of solving both Dog and Manipulator domains in the DeepMind Control Suite using pixel observations. 
 </p>
-<p><img style="width: 100%" src="/asset/drm//dmc.png" /></p>
+<p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
 <style>
 .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
 .videos video { flex: 1; width: 23%; border-radius: .25em; }
@@ -158,6 +158,34 @@ function restartVideos() {
   <span class="restart" onclick="restartVideos()">Restart Videos</span>
 </p>
 
+
+<h2 id="scaling">Dormant Ratio</h2>
+<p>There is a connection between the sharp reduction of an agent's dormant ratio and the agent's skill acquisition in visual continuous control tasks. </p>
+<div class="videos">
+  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325343-cb0a71ba-b8a0-4c81-a5a8-0b7a738b6117.mp4" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325346-1dadce21-a44e-4dfa-bc0b-72d8edca01d7.mp4" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325349-aad730cc-12dd-4f63-a0c2-7b70706b254a.mp4" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325327-93ca12d1-f268-477a-b396-337db213372d.mp4" /></video>
+</div>
+<style>
+  .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
+  .videos video { flex: 1; width: 23%; border-radius: .25em; }
+  .restart { display: inline-block; padding: .55em 1em .45em; border-radius: .25em; background: #ddd; cursor: pointer; }
+  .restart:hover { background: #eee; }
+  .restart:active { background: #ccc; }
+</style>
+<script defer="">
+  function restartVideos() {
+    document.querySelectorAll('.videos video').forEach((video) => {
+      video.pause()
+      video.currentTime = 0
+      video.play()
+    })
+  }
+</script>
+<p style="text-align: center">
+  <span class="restart" onclick="restartVideos()">Restart Videos</span>
+</p>
 
 <h2 id="data-efficiency">Time Efficiency</h2>
 <p>To assess the algorithms' speed, we measure their frames per second (FPS) on the same DeepMind Control Suite task, Dog Walk, using an identical Nvidia RTX A5000 GPU. 
