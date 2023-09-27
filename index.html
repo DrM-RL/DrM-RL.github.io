@@ -45,12 +45,12 @@
 
 
 <h2 id="highlights">Highlights</h2>
+<p style="text-align: center">
+  <img style="width: 78%" src="/asset/drm/all_performance.png" />
+  </p>
 <p>We evaluate DrM on three image-based continuous control benchmarks for both locomotion and robotic manipulation: DeepMind Control Suite, Meta-World, and Adroit. 
     These environments feature rich visual elements like textures and shading, necessitate fine-grained control due to complex geometry, and introduce additional challenges 
     such as sparse rewards and high-dimensional action spaces that previous visual RL algorithms like DrQv2 have been unable to solve.</p>
-<p style="text-align: center">
-<img style="width: 78%" src="/asset/drm/all_performance.png" />
-</p>
 <video controls="" muted="" style="width: 100%; border-radius: .25em">
   <source src="/asset/drm/diamond.mp4" />
 </video>
@@ -69,6 +69,7 @@
 <p>This complexity makes the three domains extremely difficult for algorithms to learn and control effectively.
   We note that DrM is the first documented model-free visual RL algorithm capable of solving both Dog and Manipulator domains in the DeepMind Control Suite using pixel observations. 
 </p>
+<p><img style="width: 100%" src="/asset/drm//dmc.png" /></p>
 <style>
 .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
 .videos video { flex: 1; width: 23%; border-radius: .25em; }
