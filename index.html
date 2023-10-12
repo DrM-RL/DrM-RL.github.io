@@ -60,17 +60,16 @@
 <p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain. 
     The Manipulator domain is particularly challenging due to its sparse reward structure and the long horizon required for skill acquisition, 
     while Humanoid and Dog tasks feature intricate kinematics, skinning weights, collision geometry, as well as muscle and tendon attachment points. </p>
-    <!--<div class="videos">
-      <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325353-fb56ff5b-50a3-4a32-a854-35c6d8cbb490.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325324-c3eba6e8-6744-404f-8f8c-c8838e244627.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325328-64038edf-5955-487a-878b-79fb6aaf081b.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325331-8f0e08d8-805a-4fd1-8778-50bf89b1d172.mp4" /></video>
-      </div>-->
+    <div class="videos">
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/dog.mp4" /></video>
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/manipulator.mp4" /></video>
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/humanoid.mp4" /></video>
+      </div>
 <p>This complexity makes the three domains extremely difficult for algorithms to learn and control effectively.
   We note that DrM is the first documented model-free visual RL algorithm capable of solving both Dog and Manipulator domains in the DeepMind Control Suite using pixel observations. 
 </p>
 <p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
-<!--<style>
+<style>
 .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
 .videos video { flex: 1; width: 23%; border-radius: .25em; }
 .restart { display: inline-block; padding: .55em 1em .45em; border-radius: .25em; background: #ddd; cursor: pointer; }
@@ -88,7 +87,7 @@ function restartVideos() {
 </script>
 <p style="text-align: center">
 <span class="restart" onclick="restartVideos()">Restart Videos</span>
-</p>-->
+</p>
 
 
 <h2 id="scaling">Meta-World</h2>
