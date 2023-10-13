@@ -111,9 +111,8 @@ function restartVideos() {
 
 <h2 id="scaling">Adroit</h2>
 <p><img style="width: 100%" src="/asset/drm/adroit.png" /></p>
-<p>We also evaluate DrM on the Adroit domain, focusing on three dexterous hand manipulation tasks: Hammer, Door, and Pen, 
-  which requires controlling a robotic hand with 24 degrees of freedom. Notably, DrM is the first documented model-free visual 
-  RL algorithm capable of reliably solving tasks in the Adroit domain without expert demonstrations.  </p>
+<p>We also evaluate DrM on the Adroit domain, focusing on three dexterous hand manipulation tasks: Hammer, Door, and Pen. 
+  Notably, DrM is the first documented model-free visual RL algorithm capable of reliably solving tasks in the Adroit domain without expert demonstrations.  </p>
 <!--<div class="videos">
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325343-cb0a71ba-b8a0-4c81-a5a8-0b7a738b6117.mp4" /></video>
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325346-1dadce21-a44e-4dfa-bc0b-72d8edca01d7.mp4" /></video>
@@ -170,20 +169,10 @@ function restartVideos() {
 </p>-->
 
 <h2 id="data-efficiency">Time Efficiency</h2>
-<p>To assess the algorithms' speed, we measure their frames per second (FPS) on the same DeepMind Control Suite task, Dog Walk, using an identical Nvidia RTX A5000 GPU. 
+<p>To assess the algorithms' speed, we measure their frames per second (FPS) on the same task, Dog Walk, using an identical Nvidia RTX A5000 GPU. 
   While achieving significant sample efficiency and asymptotic performance, DrM only slightly compromises wall-clock time compared to DrQ-v2. 
   Compared with two other baselines, DrM is roughly as time-efficient as ALIX and about three times faster than TACO.</p>
-<!--<div class="videos dmlab">
-<video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212435069-0845fe09-b3d8-4518-9172-daaac5092b2d.mp4" /></video>
-<video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212435059-6ff4d419-abf6-49ae-890b-210c29a7d470.mp4" /></video>
-<video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212435049-5d66a543-8dba-42ff-83fe-50774e6c8cda.mp4" /></video>
-<video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212435043-419af193-9502-4d1b-8417-16358653a156.mp4" /></video>
-</div>
-<script defer="">
-document.querySelectorAll('.videos.dmlab video').forEach((video) => {
-  video.playbackRate = 0.5
-})
-</script>-->
+
 <p style="text-align: center">
 <img style="width: 40%" src="/asset/drm/fps.png" />
 </p>
