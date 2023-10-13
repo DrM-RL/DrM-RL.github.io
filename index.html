@@ -57,18 +57,15 @@
 
 
 <h2 id="dmc">DeepMind Control Suite</h2>
-<p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain. 
+<p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
+<p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain, as well as Acrobot Swingup Sparse.. 
     The Manipulator domain is particularly challenging due to its sparse reward structure and the long horizon required for skill acquisition, 
     while Humanoid and Dog tasks feature intricate kinematics, skinning weights, collision geometry, as well as muscle and tendon attachment points. </p>
     <div class="videos">
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/dog.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/manipulator.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/drm/humanoid.mp4" /></video>
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/dog.mp4" /></video>
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/manipulator.mp4" /></video>
+      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/humanoid.mp4" /></video>
       </div>
-<p>This complexity makes the three domains extremely difficult for algorithms to learn and control effectively.
-  We note that DrM is the first documented model-free visual RL algorithm capable of solving both Dog and Manipulator domains in the DeepMind Control Suite using pixel observations. 
-</p>
-<p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
 <style>
 .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
 .videos video { flex: 1; width: 23%; border-radius: .25em; }
@@ -91,20 +88,20 @@ function restartVideos() {
 
 
 <h2 id="scaling">Meta-World</h2>
-<p>In MetaWorld, we evaluate our method and baselines on six challenging tasks with dense human-shaping rewards following prior works, including one medium, two hard, and three very hard tasks.
-  Across this spectrum of tasks with varying degrees of complexity, our method consistently outperformed the baseline algorithms in terms of sample efficiency.</p>
-<!--<div class="videos">
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325333-7f2c0e5f-f862-45f5-8399-93aa2d94f2fb.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325334-5a44904c-4e6b-4ffe-befe-a2b99c1f5279.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325338-2c8e22a9-e3e1-4099-a015-544936583922.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325340-4d580209-6013-4fbd-aa52-e7bd3588c229.mp4" /></video>
-</div>-->
-<p>Moreover, in more challenging scenarios where we only used sparse task completion rewards for three medium tasks, most other baselines struggled to learn using spare rewards, 
-  with success rates hovering close to zero. In contrast, our algorithm achieve success rates ranging from 20% to 40%, highlighting the substantial benefits of dormant-ratio-based 
-  exploration for sparse reward tasks.
-</p>
 <p><img style="width: 100%" src="/asset/drm/metaworld.png" /></p>
-<!--<style>
+<p> In Meta-World, we evaluate DrM and baselines on eight challenging tasks
+  including 4 very hard tasks with dense rewards following prior works and 4 medium tasks with sparse
+  success signals. </p>
+<div class="videos">
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/coffee-push.gif" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/disassemble.gif" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/pick-place-wall.gif" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/soccer.gif" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/stick-pull.gif" /></video>
+  <video controls="" muted="" autoplay="" loop=""><source src="asset/metaworld/sweep-into.gif" /></video>
+ </div>
+
+<style>
   .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
   .videos video { flex: 1; width: 23%; border-radius: .25em; }
   .restart { display: inline-block; padding: .55em 1em .45em; border-radius: .25em; background: #ddd; cursor: pointer; }
@@ -122,21 +119,20 @@ function restartVideos() {
   </script>
   <p style="text-align: center">
   <span class="restart" onclick="restartVideos()">Restart Videos</span>
-</p>-->
+</p>
 
 
 <h2 id="scaling">Adroit</h2>
+<p><img style="width: 100%" src="/asset/drm/adroit.png" /></p>
 <p>We also evaluate DrM on the Adroit domain, focusing on three dexterous hand manipulation tasks: Hammer, Door, and Pen, 
-  which requires controlling a robotic hand with 24 degrees of freedom. Given the task's high-dimensional action space and 
-  intricate physics, previous reinforcement learning algorithms have faced significant challenges, epscially when learning from pixel observations. </p>
+  which requires controlling a robotic hand with 24 degrees of freedom. Notably, DrM is the first documented model-free visual 
+  RL algorithm capable of reliably solving tasks in the Adroit domain without expert demonstrations.  </p>
 <!--<div class="videos">
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325343-cb0a71ba-b8a0-4c81-a5a8-0b7a738b6117.mp4" /></video>
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325346-1dadce21-a44e-4dfa-bc0b-72d8edca01d7.mp4" /></video>
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325349-aad730cc-12dd-4f63-a0c2-7b70706b254a.mp4" /></video>
   <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325327-93ca12d1-f268-477a-b396-337db213372d.mp4" /></video>
 </div>-->
-<p>Notably, DrM is the first documented model-free visual RL algorithm capable of reliably solving tasks in the Adroit domain without expert demonstrations.</p>
-<p><img style="width: 100%" src="/asset/drm/adroit.png" /></p>
 <!--<style>
   .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
   .videos video { flex: 1; width: 23%; border-radius: .25em; }
