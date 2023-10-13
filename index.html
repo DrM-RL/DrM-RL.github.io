@@ -67,9 +67,7 @@
 
 <h2 id="dmc">DeepMind Control Suite</h2>
 <p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
-<p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain, as well as Acrobot Swingup Sparse.. 
-    The Manipulator domain is particularly challenging due to its sparse reward structure and the long horizon required for skill acquisition, 
-    while Humanoid and Dog tasks feature intricate kinematics, skinning weights, collision geometry, as well as muscle and tendon attachment points. </p>
+<p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain, as well as Acrobot Swingup Sparse. </p>
     <div class="videos">
       <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/dog.mp4" /></video>
       <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/manipulator.mp4" /></video>
@@ -109,27 +107,6 @@ function restartVideos() {
     <img src="asset/metaworld/stick-pull.gif" alt="Stick Pull" />
     <img src="asset/metaworld/sweep-into.gif" alt="Sweep Into" />
   </div>
-  
-
-<style>
-  .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
-  .videos video { flex: 1; width: 23%; border-radius: .25em; }
-  .restart { display: inline-block; padding: .55em 1em .45em; border-radius: .25em; background: #ddd; cursor: pointer; }
-  .restart:hover { background: #eee; }
-  .restart:active { background: #ccc; }
-  </style>
-  <script defer="">
-  function restartVideos() {
-    document.querySelectorAll('.videos video').forEach((video) => {
-      video.pause()
-      video.currentTime = 0
-      video.play()
-    })
-  }
-  </script>
-  <p style="text-align: center">
-  <span class="restart" onclick="restartVideos()">Restart Videos</span>
-</p>
 
 
 <h2 id="scaling">Adroit</h2>
