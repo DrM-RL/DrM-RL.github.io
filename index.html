@@ -139,35 +139,6 @@ function restartVideos() {
   <span class="restart" onclick="restartVideos()">Restart Videos</span>
 </p>-->
 
-
-<h2 id="scaling">Dormant Ratio</h2>
-<p>There is a connection between the sharp reduction of an agent's dormant ratio and the agent's skill acquisition in visual continuous control tasks. </p>
-<!--<div class="videos">
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325343-cb0a71ba-b8a0-4c81-a5a8-0b7a738b6117.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325346-1dadce21-a44e-4dfa-bc0b-72d8edca01d7.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325349-aad730cc-12dd-4f63-a0c2-7b70706b254a.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325327-93ca12d1-f268-477a-b396-337db213372d.mp4" /></video>
-</div>
-<style>
-  .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
-  .videos video { flex: 1; width: 23%; border-radius: .25em; }
-  .restart { display: inline-block; padding: .55em 1em .45em; border-radius: .25em; background: #ddd; cursor: pointer; }
-  .restart:hover { background: #eee; }
-  .restart:active { background: #ccc; }
-</style>
-<script defer="">
-  function restartVideos() {
-    document.querySelectorAll('.videos video').forEach((video) => {
-      video.pause()
-      video.currentTime = 0
-      video.play()
-    })
-  }
-</script>
-<p style="text-align: center">
-  <span class="restart" onclick="restartVideos()">Restart Videos</span>
-</p>-->
-
 <h2 id="data-efficiency">Time Efficiency</h2>
 <p>To assess the algorithms' speed, we measure their frames per second (FPS) on the same task, Dog Walk, using an identical Nvidia RTX A5000 GPU. 
   While achieving significant sample efficiency and asymptotic performance, DrM only slightly compromises wall-clock time compared to DrQ-v2. 
