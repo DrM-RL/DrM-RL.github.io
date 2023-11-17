@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DrM: Mastering Visual Reinforcement Learning through Dormant Ratio Minimization</title>
 <meta name="description" content="Abstract">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="asset/css/drm.css">
 <link rel="canonical" href="https://drm-rl.github.io/">
 <link rel="shortcut icon" href="asset/favicon.jpg"> 
 </head>
@@ -17,16 +17,13 @@
 <div class="wrapper">
 <h1>DrM: Mastering Visual Reinforcement Learning through Dormant Ratio Minimization</h1>
 <p class="authors">
-<span class="author"><a target="_blank" href="https://drm-rl.github.io/">Anonymous</a></span> 
+<span class="author"><a target="_blank">Anonymous</a></span> 
 </p>
-<!--<p class="venues">Preprint</p>-->
 
-<!--<div class="image"><img src="asset/title.gif" /></div>-->
-<!--<p class="buttons">
-<a href="https://arxiv.org/" target="_blank">Paper</a>
-<a href="https://twitter.com/" target="_blank">Twitter</a>
-<a href="https://github.com/" target="_blank">Code</a>
-</p>-->
+<div class="videos">
+  <video muted="" autoplay="" loop=""><source src="asset/title.mp4" /></video>
+</div>
+
 </div>
 </div>
 
@@ -55,23 +52,20 @@
 
 <h2 id="highlights">Highlights</h2>
 <p style="text-align: center">
-  <img style="width: 78%" src="/asset/drm/all.png" />
+  <img style="width: 78%" src="asset/drm/all.png" />
   </p>
 <p>We evaluate DrM on three benchmarks for both locomotion and robotic manipulation: DeepMind Control Suite, Meta-World, and Adroit. 
     These environments feature rich visual elements like textures and shading, necessitate fine-grained control due to complex geometry, and introduce additional challenges 
     such as sparse rewards and high-dimensional action spaces that previous visual RL algorithms like DrQv2 have been unable to solve.</p>
-<!--<video controls="" muted="" style="width: 100%; border-radius: .25em">
-  <source src="/asset/drm/diamond.mp4" />
-</video>-->
 
 
 <h2 id="dmc">DeepMind Control Suite</h2>
-<p><img style="width: 100%" src="/asset/drm/dmc.png" /></p>
+<p><img style="width: 100%" src="asset/drm/dmc.png" /></p>
 <p>For Deepmind Control Suite, we evaluate DrM on eight hardest tasks from the Humanoid, Dog, and Manipulator domain, as well as Acrobot Swingup Sparse. </p>
     <div class="videos">
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/dog.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/manipulator.mp4" /></video>
-      <video controls="" muted="" autoplay="" loop=""><source src="/asset/dmc/humanoid.mp4" /></video>
+      <video muted="" autoplay="" loop=""><source src="asset/dmc/dog.mp4" /></video>
+      <video muted="" autoplay="" loop=""><source src="asset/dmc/manipulator.mp4" /></video>
+      <video muted="" autoplay="" loop=""><source src="asset/dmc/humanoid.mp4" /></video>
       </div>
 <style>
 .videos { display: flex; flex-wrap: wrap; align-content: space-between; gap: .5em; }
@@ -79,7 +73,7 @@
 </style>
 
 <h2 id="scaling">Meta-World</h2>
-<p><img style="width: 100%" src="/asset/drm/metaworld.png" /></p>
+<p><img style="width: 100%" src="asset/drm/metaworld.png" /></p>
 <p> In Meta-World, we evaluate DrM and baselines on eight challenging tasks
   including 4 very hard tasks with dense rewards following prior works and 4 medium tasks with sparse
   success signals. </p>
@@ -94,15 +88,14 @@
 
 
 <h2 id="scaling">Adroit</h2>
-<p><img style="width: 100%" src="/asset/drm/adroit.png" /></p>
+<p><img style="width: 100%" src="asset/drm/adroit.png" /></p>
 <p>We also evaluate DrM on the Adroit domain, focusing on three dexterous hand manipulation tasks: Hammer, Door, and Pen. 
   Notably, DrM is the first documented model-free visual RL algorithm capable of reliably solving tasks in the Adroit domain without expert demonstrations.  </p>
-<!--<div class="videos">
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325343-cb0a71ba-b8a0-4c81-a5a8-0b7a738b6117.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325346-1dadce21-a44e-4dfa-bc0b-72d8edca01d7.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325349-aad730cc-12dd-4f63-a0c2-7b70706b254a.mp4" /></video>
-  <video controls="" muted="" autoplay="" loop=""><source src="https://user-images.githubusercontent.com/2111293/212325327-93ca12d1-f268-477a-b396-337db213372d.mp4" /></video>
-</div>-->
+  <div class="videos">
+    <video muted="" autoplay="" loop=""><source src="asset/adroit/7.mp4" /></video>
+    <video muted="" autoplay="" loop=""><source src="asset/adroit/8.mp4" /></video>
+    <video muted="" autoplay="" loop=""><source src="asset/adroit/9.mp4" /></video>
+    </div>
 
 <h2 id="dormant">Dormant Ratio and Behavioral Variety</h2>
 <p>We notice that a sharp decline in the dormant ratio of an agent's policy network serves
@@ -112,7 +105,7 @@
   levels.</p>
 
   <div class="videos">
-    <video controls="" muted="" autoplay="" loop=""><source src="/asset/dormant.mp4" /></video>
+    <video controls="" muted="" autoplay="" loop=""><source src="asset/dormant.mp4" /></video>
   </div>
 
 <h2 id="data-efficiency">Time Efficiency</h2>
@@ -121,7 +114,7 @@
   Compared with two other baselines, DrM is roughly as time-efficient as ALIX and about three times faster than TACO.</p>
 
 <p style="text-align: center">
-<img style="width: 40%" src="/asset/drm/fps.png" />
+<img style="width: 40%" src="asset/drm/fps.png" />
 </p>
 </div>
 </article>
@@ -144,6 +137,6 @@ ga('create', 'UA-78082517-1', 'auto');
 ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script async src='/scripts.js'></script>
+<script async src='asset/drm.js'></script>
 </body>
 </html>
